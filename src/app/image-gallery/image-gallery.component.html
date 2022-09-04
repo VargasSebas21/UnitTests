@@ -1,6 +1,6 @@
 <div>    
     <div class="row">    
-      <div class="col-sm-12 btn btn-primary">    
+      <div class="col-sm-12 btn btn-primary" id="title">    
         Pet Book Prueba Devops
       </div>    
     </div>    
@@ -8,13 +8,13 @@
       <div class="col-sm-1">    
       </div>    
       <div class="col-sm-2">    
-        <button class="btn btn-success" (click)="filterBy='all'">All</button>    
+        <button class="btn btn-success" id="allButton" (click)="filterBy='all'">All</button>    
       </div>    
       <div class="col-sm-2">    
-        <button class="btn btn-success" (click)="filterBy='perro'">Perro</button>    
+        <button class="btn btn-success" id="perroButton" (click)="filterBy='perro'">Perro</button>    
       </div>    
       <div class="col-sm-2">    
-        <button class="btn btn-success" (click)="filterBy='gato'">Gato</button>    
+        <button class="btn btn-success" id="catButton" (click)="filterBy='gato'">Gato</button>    
       </div>    
       <div class="col-sm-1">    
       </div>    
@@ -22,7 +22,7 @@
     <div class="row">    
       <ul>    
         <li *ngFor="let img of (allImages | filterimages:filterBy)">    
-          <a [routerLink]="['/image', img.id]">    
+          <a [routerLink]="['/image', img.id]" class="linker">    
             <img src="{{img.url}}" class="img" width="240" height="170">    
           </a>    
         </li>    
