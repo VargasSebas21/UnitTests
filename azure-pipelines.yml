@@ -19,7 +19,7 @@ steps:
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'sonarCloud'
-    organization: 'vargassebas21'
+    organization: 'zukko1'
     scannerMode: 'CLI'
     configMode: 'file'
 - task: SonarCloudAnalyze@1
